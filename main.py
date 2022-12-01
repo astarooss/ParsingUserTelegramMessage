@@ -3,18 +3,15 @@ import configparser
 from telethon.sync import TelegramClient
 import sqlite3
 
-import time
-
-from telethon.tl.functions.channels import GetParticipantsRequest
-from telethon.tl.types import ChannelParticipantsSearch
-
 # класс для работы с сообщениями
 from telethon.tl.functions.messages import GetHistoryRequest
 
 
 
 URL = [] #ссылки на чаты
-WORDS = ['Работ', 'робот', 'вакан','Обязанности','требуется','Склад','набор','Набираем'] #Ключевые слова
+
+
+
 
 # Считываем учетные данные
 config = configparser.ConfigParser()
@@ -91,7 +88,7 @@ async def main():
         
         
 
-
+    
     with open("invajt_done.txt ", "r") as file: #проверка на прошлый парсинг
         list1 = file.readlines()
     lst = res_list
